@@ -25,7 +25,7 @@ form.addEventListener('submit', async event => {
 });
 
 async function getData(cityName, apiKey) {
-  const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`);
+  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`, { mode: 'cors' });
   const data = await response.json();
 
   return data;
